@@ -1,12 +1,8 @@
 .video-container {
-  margin-left: 2%;
   width: 84%;
   height: 100vh;
-  overflow-y: hidden;
-}
-
-.video-container:hover {
   overflow-y: auto;
+  position: relative;
   scrollbar-width: thin;
   scrollbar-color: #cccccc #f0f0f0;
 }

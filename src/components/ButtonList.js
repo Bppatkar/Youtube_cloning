@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const ButtonList = () => {
   const listOfButtons = [
@@ -17,29 +17,49 @@ const ButtonList = () => {
   ];
 
   const [selectedButton, setSelectedButton] = useState("All");
+  const [showMore, setShowMore] = useState(false);
+  const containerRef = useRef(null);
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const containerWidth = containerRef.current.offsetWidth;
+    const viewportWidth = window.innerWidth;
+    setShowArrow(containerWidth > viewportWidth);
+  }, [showMore]);
 
   const handleButtonClick = (buttonText) => {
     setSelectedButton(buttonText);
   };
 
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
-    <div className="flex overflow-x-auto space-x-2 mt-3 mr-4 w-full ">
-      {listOfButtons.map((buttonText, index) => (
+    <div className="flex mt-3 mr-4 w-full overflow-x-hidden">
+      <div ref={containerRef} className="flex">
+        {listOfButtons.map((buttonText, index) => (
+          <button
+            key={index}
+            className={`${
+              selectedButton === buttonText
+                ? "bg-slate-800 text-white"
+                : "bg-gray-300"
+            } hover:bg-slate-700 text-white font-bold py-2 px-4 m-1 rounded-xl text-center`}
+            onClick={() => handleButtonClick(buttonText)}
+          >
+            {buttonText}
+          </button>
+        ))}
+      </div>
+      {showArrow && (
         <button
-          key={index}
-          className={`${
-            selectedButton === buttonText
-              ? "bg-slate-800 text-white"
-              : "bg-gray-300"
-          } hover:bg-slate-700 text-white font-bold py-2 px-4  inline-flex items-center overflow-hidden rounded-xl text-center`}
-          onClick={() => handleButtonClick(buttonText)}
+          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 m-1 rounded-xl"
+          onClick={handleShowMore}
         >
-          {buttonText}
-          {selectedButton === buttonText && (
-            <span className="ml-2 overflow-hidden"></span>
-          )}
+          &gt;
         </button>
-      ))}
+      )}
     </div>
   );
 };

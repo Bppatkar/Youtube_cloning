@@ -36,7 +36,7 @@ const VideoContainer = () => {
         throw new Error("Failed to fetch data");
       }
       const data = await res.json();
-      console.log(data.items[0]);
+      // console.log(data.items[0]);
       setVideoItem(data.items);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -44,9 +44,13 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className="video-container" ref={videoContainerRef}>
+    <div className="video-container">
       <ButtonList />
-      <div className="video-content">
+      <div
+        className="video-content"
+        ref={videoContainerRef}
+        style={{ flex: "1", overflowY: "hidden" }}
+      >
         {videoItem.map((video) => (
           <Link key={video.id} to={"/watch?v=" + video.id}>
             <VideoCard data={video} />

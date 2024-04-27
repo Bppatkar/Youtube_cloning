@@ -20,7 +20,7 @@ const Sidebar = () => {
           <span className="flex items-center">
             <img
               className="h-6 mr-2"
-              src="https://i.pinimg.com/474x/02/cc/2d/02cc2df2074675a18e9edf1d1e3dbb43.jpg"
+              src="https://i.pinimg.com/originals/17/d2/18/17d21878c22fe49e7e4752eecaa36541.png"
               alt="ShortsButton"
             />
             <h2 className="p-2 font-semibold">Shorts</h2>
@@ -86,38 +86,94 @@ const Sidebar = () => {
         <div className="border-b-2 border-gray-200"></div>
         <div className=" m-2 p-2">
           <h1 className="p-2 font-bold">Explore</h1>
-          <h2 className="p-2 ml-3 ">
+          <span className="flex items-center">
             <img
-              className="h-8"
+              className="h-8 mr-2"
               src="https://icon-library.com/images/trending-icon/trending-icon-2.jpg"
               alt=""
             />
-            Trending
-          </h2>
-          <h2 className="p-2 ml-3 ">
+            <h2 className="p-2 ">Trending</h2>
+          </span>
+          <span className="flex items-center">
             <img
-              className="h-8"
+              className="h-8 mr-2"
               src="https://www.kindpng.com/picc/m/177-1772005_playstore-icon-free-download-youtube-icon-transparent-background.png"
               alt=""
             />
-            Shopping
-          </h2>
-          <h2 className="p-2 ml-3 ">
+            <h2 className="p-2 ">Shopping</h2>
+          </span>
+          <span className="flex items-center">
             <img
-              className="h-8"
+              className="h-8 mr-2"
               src="https://cdn.iconscout.com/icon/free/png-256/free-youtube-music-4054103-3353178.png"
               alt=""
             />
-            Music
-          </h2>
-          <h2 className="p-2 ml-3 ">Films</h2>
-          <h2 className="p-2 ml-3 ">Live</h2>
-          <h2 className="p-2 ml-3 ">Gaming</h2>
-          <h2 className="p-2 ml-3 ">News</h2>
-          <h2 className="p-2 ml-3 ">Sport</h2>
-          <h2 className="p-2 ml-3 ">Courses</h2>
-          <h2 className="p-2 ml-3 ">Fashion & beauty</h2>
-          <h2 className="p-2 ml-3 ">Podcasts</h2>
+            <h2 className="p-2 ">Music</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://cdn1.iconfinder.com/data/icons/youtube-23/27/Union-6-512.png"
+              alt=""
+            />
+            <h2 className="p-2 ">Films</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://cdn-icons-png.flaticon.com/512/2989/2989838.png"
+              alt=""
+            />
+            <h2 className="p-2 ">Live</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://cdn.iconscout.com/icon/free/png-256/free-youtube-gaming-4941797-4109197.png"
+              alt=""
+            />
+            <h2 className="p-2 ">Gaming</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://c8.alamy.com/comp/2B3HCP4/youtube-icon-2B3HCP4.jpg"
+              alt=""
+            />
+            <h2 className="p-2 ">News</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://cdn-icons-png.flaticon.com/512/74/74626.png"
+              alt=""
+            />
+            <h2 className="p-2 ">Sport</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://cdn-icons-png.flaticon.com/256/116/116860.png"
+              alt=""
+            />
+            <h2 className="p-2 ">Courses</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://icon-library.com/images/hanger-icon/hanger-icon-14.jpg"
+              alt=""
+            />
+            <h2 className="p-2 ">Fashion & Beauty</h2>
+          </span>
+          <span className="flex items-center">
+            <img
+              className="h-8 mr-2"
+              src="https://t4.ftcdn.net/jpg/05/52/46/89/360_F_552468922_y1ruRnOZ2P2ksnd7tcIiv9yC50fguZBw.jpg"
+              alt=""
+            />
+            <h2 className="p-2 ">Podcasts</h2>
+          </span>
         </div>
         <div className="border-b-2 border-gray-200"></div>
       </div>
