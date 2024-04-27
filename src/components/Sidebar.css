@@ -1,0 +1,23 @@
+.sidebar-container {
+  min-width: 15%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.sidebar-container:hover {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #f0f0f0;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 3px;
+}
+.sidebar-content {
+  min-width: calc(100% - 15%);
+}

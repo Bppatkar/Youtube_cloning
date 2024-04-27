@@ -1,0 +1,23 @@
+.video-container {
+  margin-left: 2%;
+  width: 84%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.video-container:hover {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc #f0f0f0;
+}
+
+.video-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0 5px;
+}
+
+.video-card {
+  flex-basis: calc(50% - 10px);
+}

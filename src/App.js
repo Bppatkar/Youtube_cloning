@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Body from "./components/Body";
+import { Provider } from "react-redux";
+import store from "./utils/store";
+import VideoContainer from "./components/VideoContainer";
+import WatchPage from "./components/WatchPage";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Body />,
+    children: [
+      { path: "/", element: <VideoContainer /> },
+      { path: "watch", element: <WatchPage /> },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div>
+        <Header />
+        <RouterProvider router={router} />
+      </div>
+    </Provider>
   );
 }
 
 export default App;
+
+// {header,
+// body- {sidebar, video-container}
+// video-container-{buttons , video-card}
+///watch url - new page video playing and comment or suggestion video
+
+// }
